@@ -18,5 +18,17 @@
 	insert into UMATSOMEMBER (id,pw,name)
 	values(#{id},#{pw},#{name})
 	</select>
+	
+	<select id = "loginid"  resultType="String">
+	select id
+	from UMATSOMEMBER
+	where id = #{id}
+	</select>
+	
+	<select id = "loginpw"  resultType="String">
+	select pw
+	from UMATSOMEMBER
+	where id = #{id}
+	</select>
   
   </mapper>

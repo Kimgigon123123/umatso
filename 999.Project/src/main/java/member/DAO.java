@@ -52,6 +52,14 @@ public class DAO {
 		sql.commit();
 		
 	}
+	public String loginid(String id) {
+		String userid = sql.selectOne("mem.loginid",id);
+		return userid;
+	}
 	
+	public String loginpw(String id) {
+		String userpw = sql.selectOne("mem.loginpw",id);
+		return userpw;
+	}
 	
 }
